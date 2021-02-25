@@ -1,5 +1,6 @@
 package application;
 
+import java.util.Date;
 import java.util.List;
 
 import model.dao.DaoFactory;
@@ -15,6 +16,8 @@ public class Program {
 		
 		Seller seller = sellerDao.findById(3);
 		
+		Department dep = new Department(2,null);
+		
 		System.out.println(seller);
 		
 		System.out.println("TESTE 2");
@@ -26,8 +29,13 @@ public class Program {
 			System.out.println(obj);	
 		}
 		
-		// TODO Auto-generated method stub
-
+		System.out.println("TESTE 3");
+		
+		Seller newSeller = new Seller(null,"Zeze","zeze@email",new Date(),4000.00,dep);
+		sellerDao.insert(newSeller);
+		
+		System.out.println(newSeller);
+		
 	}
 
 }
