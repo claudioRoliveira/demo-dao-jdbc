@@ -31,11 +31,14 @@ public class Program {
 		
 		System.out.println("TESTE 3");
 		
-		Seller newSeller = new Seller(null,"Zeze","zeze@email",new Date(),4000.00,dep);
-		sellerDao.insert(newSeller);
+		//Seller newSeller = new Seller(null,"Zeze","zeze@email",new Date(),4000.00,dep);
+		//sellerDao.insert(newSeller);
 		
-		System.out.println(newSeller);
+		//System.out.println(newSeller);
 		
+		seller = sellerDao.findById(11);
+		seller.setName("Jose Otavio");
+		sellerDao.update(seller);
 	}
 
 }
